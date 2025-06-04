@@ -21,11 +21,13 @@ class SplashScreen extends StatelessWidget {
         child:Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children:[
+            SizedBox(height:30),
             BlackTextWidget(text:'Get Discounts \n On All Products'),
             SizedBox(height:20),
             GreyTextWidget(text: 'Lorem ipsum dolor sit amet, consetetur \n sadipscing elitr, sed diam nonumy'),
             Spacer(),
             GreenButton(text: 'Get Started', onTap: (){}),
+            SizedBox(height:30),
           ]
         )
       ),

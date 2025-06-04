@@ -15,14 +15,22 @@ class GreenButton extends StatelessWidget {
         width:double.infinity,
         margin:EdgeInsets.symmetric(horizontal:20),
       decoration:BoxDecoration(
-        gradient: LinearGradient(colors: [AppColors.darkGreen,
-        AppColors.lightGreen,],
+        gradient: LinearGradient(colors: [AppColors.lightGreen,
+        AppColors.darkGreen,],
         ),
           borderRadius:BorderRadius.circular(5)
       ),
-      child:Center(
-          child:Text(text,
-            textAlign: TextAlign.center,))),
+      child:Row(
+        children: [
+          SizedBox(width:10),
+          Icon(Icons.account_circle,color:Colors.white),
+         SizedBox(width:50),
+         Text(text,
+                textAlign: TextAlign.center,
+              style:TextStyle(color:Colors.white,)),
+
+        ],
+      )),
     );
   }
 }

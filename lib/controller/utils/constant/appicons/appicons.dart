@@ -4,4 +4,5 @@ class AppIcons{
   static String facebooklogo='assets/appicons/facebook.png';
   static String instagramlogo='assets/appicons/instagram.png';
   static String whatsapplogo='assets/appicons/whatsapp.png';
+  static String googlelogo='assets/icons/google.png';
 }
