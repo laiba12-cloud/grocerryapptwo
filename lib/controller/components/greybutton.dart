@@ -24,7 +24,7 @@ class GreyButton extends StatelessWidget {
               SizedBox(width:10),
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: Image.asset(AppIcons.googlelogo,),
+                child: Image.asset(AppIcons.google,),
               ),
               SizedBox(width:15),
               Text(text,style:TextStyle(

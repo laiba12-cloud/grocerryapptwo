@@ -19,5 +19,6 @@ static String intro1='assets/images/intro1.png';
   static String intro3='assets/images/intro3.png';
   static String LadyGrocery2='assets/images/ladygrocery2.png';
   static String ladygrocery3='assets/images/ladygrocery3.png';
-
+static String food2='assets/images/food2.png';
+static String broccoli='assets/images/green-fresh-broccoli.png';
 }

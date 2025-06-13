@@ -35,7 +35,7 @@ class _PasswordClassState extends State<PasswordClass> {
                   });
                 }, icon:Icon(
                   isSecure==true?
-                  Icons.add_circle
+                  Icons.visibility_off
                       :
                     Icons.remove_red_eye),),
                 )

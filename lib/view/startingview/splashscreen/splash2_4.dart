@@ -15,28 +15,37 @@ class SplashTwo extends StatelessWidget {
             'assets/images/cockroach.png',
             fit:BoxFit.cover,
           ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+
           Container(
             //height:double.infinity,
-           // width:double.infinity,
-            decoration: BoxDecoration(
-              borderRadius:BorderRadius.only(
-                topRight: Radius.circular(500),
-                topLeft: Radius.circular(500),
+             width:double.infinity,
+              height: 330,
+
+
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius:BorderRadius.only(
+                  topRight: Radius.circular(150),
+                  topLeft: Radius.circular(150),
+                ),
               ),
-            ),
-            child:Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              child:Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children:[
-                 Spacer(),
-                 BlackTextWidget(text: 'Get Discounts \n On All Products'),
+SizedBox(height: 90,),
+                  BlackTextWidget(text: 'Get Discounts \n On All Products'),
                   SizedBox(height:10),
                   GreyTextWidget(text: 'Lorem ipsum dolor sit amet consetetur \n sadipscing elitr, sed diam nonumy'),
-               SizedBox(height:10),
-                GreenTextButton(text: 'Get Started', onTap: (){}),
-                  SizedBox(height:70),
+                  SizedBox(height:10),
+                  GreenTextButton(text: 'Get Started', onTap: (){}),
+                  SizedBox(height:10),
                 ],
-            )
+              )
           ),
+        ],)
         ],
       )
     );
