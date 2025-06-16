@@ -4,6 +4,7 @@ import 'package:grocerryapptwo/view/authview/signupscreen/signup.dart';
 import 'package:grocerryapptwo/view/authview/welcomescreen/welcome.dart';
 import 'package:grocerryapptwo/view/authview/welcomescreen/welcome.dart';
 import 'package:grocerryapptwo/view/homeview/homescreen1.dart';
+import 'package:grocerryapptwo/view/homeview/homescreenfinal.dart';
 import 'package:grocerryapptwo/view/startingview/introscreen/OnboardingScreen.dart';
 import 'package:grocerryapptwo/view/startingview/splashscreen/splash2.dart';
 import 'package:grocerryapptwo/view/startingview/splashscreen/splash2_1.dart';
@@ -25,7 +26,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      debugShowCheckedModeBanner: false,
-        home:HomeScreen()
+        home://HomeScreenFinal()
+      HomeScreen()
       //SplashTwo()
       //Splashtwo_one()
 
