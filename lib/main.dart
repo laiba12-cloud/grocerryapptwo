@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:grocerryapptwo/model/model%20class.dart';
 import 'package:grocerryapptwo/view/authview/loginscreen/login.dart';
 import 'package:grocerryapptwo/view/authview/signupscreen/signup.dart';
 import 'package:grocerryapptwo/view/authview/welcomescreen/welcome.dart';
 import 'package:grocerryapptwo/view/authview/welcomescreen/welcome.dart';
-import 'package:grocerryapptwo/view/homeview/homescreen1.dart';
+import 'package:grocerryapptwo/view/bottombar.dart';
+import 'package:grocerryapptwo/view/homeview/account/account.dart';
+import 'package:grocerryapptwo/view/homeview/account/trackorder.dart';
+//import 'package:grocerryapptwo/view/homeview/account/track%20order.dart';
+//import 'package:grocerryapptwo/view/homeview/homescreen1.dart';
 import 'package:grocerryapptwo/view/homeview/homescreenfinal.dart';
+import 'package:grocerryapptwo/view/homeview/homescreenlast.dart';
 import 'package:grocerryapptwo/view/startingview/introscreen/OnboardingScreen.dart';
 import 'package:grocerryapptwo/view/startingview/splashscreen/splash2.dart';
 import 'package:grocerryapptwo/view/startingview/splashscreen/splash2_1.dart';
@@ -26,8 +32,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      debugShowCheckedModeBanner: false,
-        home://HomeScreenFinal()
-      HomeScreen()
+        home://TrackClass()
+        AccountScreen()
+        //BottomBar()
+      //GridClass()
+       // HomeScreenLast()
+      //HomeScreenFinal()
+     // HomeScreen()
       //SplashTwo()
       //Splashtwo_one()
 

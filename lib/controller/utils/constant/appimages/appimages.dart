@@ -20,5 +20,12 @@ static String intro1='${base}intro1.png';
   static String LadyGrocery2='${base}ladygrocery2.png';
   static String ladygrocery3='${base}ladygrocery3.png';
 static String food2='${base}food2.png';
-static String broccoli='${base}green-fresh-broccoli.png';
+static String brocoli='${base}brocoli.png';
+static String pineapple='${base}pineapple.png';
+static String avacado='${base}avacado.png';
+static String peach='${base}peach.png';
+static String grapes='${base}grapes.png';
+static String pomegranate='${base}pomegranate.png';
+static String girl='${base}girl.png';
+  static String card='${base}card.png';
 }
