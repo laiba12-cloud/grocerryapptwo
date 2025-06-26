@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../utils/constant/appicons/appicons.dart';
 class PasswordClass extends StatefulWidget {
   const PasswordClass({super.key});
 
@@ -22,7 +24,7 @@ class _PasswordClassState extends State<PasswordClass> {
             decoration: InputDecoration(
               border: InputBorder.none,
               hintText: 'Enter Password',
-                prefixIcon: Icon(Icons.lock,color:Colors.grey,size:20),
+                prefixIcon: ImageIcon(AssetImage(AppIcons.lock),color:Colors.grey,size:15),
                 suffixIcon: IconButton(onPressed: (){
                   if(isSecure==true){
                     isSecure=false;

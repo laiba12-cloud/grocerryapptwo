@@ -1,86 +1,155 @@
 import 'package:flutter/material.dart';
-import 'package:grocerryapptwo/controller/components/Container.dart';
 import 'package:grocerryapptwo/controller/components/blacktextwidget.dart';
-import 'package:grocerryapptwo/controller/components/simplecontainer.dart';
+import 'package:grocerryapptwo/controller/components/greentextbutton.dart';
+import 'package:grocerryapptwo/controller/components/greytextwidget.dart';
 import 'package:grocerryapptwo/controller/utils/constant/appcolors/appcolors.dart';
 import 'package:grocerryapptwo/controller/utils/constant/appicons/appicons.dart';
-class Myaddress extends StatefulWidget {
-  Myaddress({super.key});
+class MyAddress extends StatefulWidget {
+  MyAddress({super.key});
 
   @override
-  State<Myaddress> createState() => _MyaddressState();
+  State<MyAddress> createState() => _MyAddressState();
 }
 
-class _MyaddressState extends State<Myaddress> {
-List <String> icon=[
-  AppIcons.track,
-  AppIcons.person,
-  AppIcons.location,
-  AppIcons.city,
-  AppIcons.zipcode,
-  AppIcons.country,
-  AppIcons.call,
-  AppIcons.track
-];
-List <String> text=[
-  'name',
-  'address',
-  'city',
-  'zip code',
-  'country',
-  'phone number'
-];
+class _MyAddressState extends State<MyAddress> {
+bool isExpanded=false;
+bool isSwitched=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.greyColor.withOpacity(0.2),
       appBar: AppBar(
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
-        title: BlackTextWidget(text: 'My address'),
-        centerTitle: true,
-        actions: [
-          Icon(Icons.add_circle),
-          SizedBox(width:10),
-        ],
+        leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+    }, icon: Icon(Icons.arrow_back),
       ),
-      body:
-      Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          children:[
-            Container(
-              height:500,
-              width:double.infinity,
-              decoration: BoxDecoration(
-                color:AppColors.whiteColor
-              ),
-              child:Column(
-                children: [
-                  Container(
-                    height:10,
-                    width:40,
-                    decoration: BoxDecoration(
-                      color:AppColors.greenColor.withOpacity(0.2)
-                    ),
-                    child:Text('Default',style: TextStyle(
-                      color:Colors.green,
-                    ),)
-                  ),
-                  Row(
-                    children: [
+        title: BlackTextWidget(text: 'My Address'),
+        centerTitle: true,
+          actions: [
 
+                Icon(Icons.add_circle),
+                SizedBox(width:8),
+              ],
+            ),
+
+      body: ListView.builder(
+                  itemCount: 7,
+                  itemBuilder: (context,index){
+                return ExpansionTile(
+                  leading: CircleAvatar(radius:30,
+                  backgroundColor: Colors.green.shade100,
+                  child:ImageIcon(AssetImage(AppIcons.address))
+                  ),
+                  title: Padding(
+                    padding: const EdgeInsets.only(right: 65.0),
+                    child: BlackTextWidget(text: 'Rusali Austin'),
+                  ),
+
+                    onExpansionChanged: (expanded) {
+                      isExpanded = expanded;
+                      setState(() {});
+                    },
+
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    GreyTextWidget( text: '2811 Crescent Day.LA part'),
+                    GreyTextWidget(text: 'California,United states 77571'),
+                    Text('+1 202 555 0142',style: TextStyle(
+                      fontWeight: FontWeight.bold
+                    ),),
+                  ],
+                ),
+                  trailing:isExpanded?IconButton(onPressed: (){}, icon: Icon(Icons.arrow_circle_up,color:Colors.green)):
+                  IconButton(onPressed: (){}, icon: Icon(Icons.arrow_circle_down,color: Colors.green,)),
+                  children: [
+                Card(
+                child:TextFormField(
+                decoration: InputDecoration(
+                    border:InputBorder.none,
+                    hintText:'Name',
+                    prefixIcon: Icon(Icons.account_circle))
+                ),
+                ),
+                Card(
+                child:TextFormField(
+                decoration: InputDecoration(
+                border:InputBorder.none,
+                hintText:'Name',
+                prefixIcon: ImageIcon(AssetImage(AppIcons.address)),)
+                ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex:50,
+                        child: Card(
+                        child:TextFormField(
+                        decoration: InputDecoration(
+                        border:InputBorder.none,
+                        hintText:'City',
+                        prefixIcon:  ImageIcon(AssetImage(AppIcons.city))
+                        ),
+                        )
+                        ),
+                      ),
+                      Expanded(
+                        flex:50,
+                        child: Card(
+                            child:TextFormField(
+                              decoration: InputDecoration(
+                                  border:InputBorder.none,
+                                  hintText:'Zip Code',
+                                  prefixIcon:  ImageIcon(AssetImage(AppIcons.zipcode))
+                              ),
+                            )
+                        ),
+                      ),
                     ],
                   ),
-                  Divider(thickness: 0.1,),
-                  SizedBox(height:300,child:ListView.builder(itemBuilder: (context,index){
-                    return Simplecontainer
-                  (width: double.infinity.toString(), icon:icon[index].toString(), text: text[index].toString());})
-                  ),],
-              )
-            )
-          ]
-        ),
-      ),
+                ),
+                Card(
+                child:TextFormField(
+                decoration: InputDecoration(
+                border:InputBorder.none,
+                hintText:'Country',
+                prefixIcon: ImageIcon(AssetImage(AppIcons.country))
+                ),
+                )
+                ),
+                Card(
+                child:TextFormField(
+                decoration: InputDecoration(
+                border:InputBorder.none,
+                hintText:'Phone Number',
+                prefixIcon: Icon(Icons.call,)
+                ),
+                )
+                ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: Row(
+                        children: [
+                          Switch(
+                              activeColor: AppColors.greenColor,
+                              value:isSwitched , onChanged: (value){
+                            isSwitched=value;
+                            setState(() {
+                            });
+                          }),
+                          BlackTextWidget(text: 'Make Default')
+                        ],
+                      ),
+                    )
+                ]
+                );
+              }
+              ),
+            // Spacer(),
+            // GreenTextButton(text: 'Save Settings', onTap: (){}),
+            // SizedBox(height:20)
+
     );
   }
 }

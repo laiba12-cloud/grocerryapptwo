@@ -4,6 +4,8 @@ import 'package:grocerryapptwo/controller/utils/constant/appicons/appicons.dart'
 import 'package:grocerryapptwo/controller/utils/constant/appimages/appimages.dart';
 import 'package:grocerryapptwo/view/authview/loginscreen/login.dart';
 import 'package:grocerryapptwo/view/authview/signupscreen/signup.dart';
+import 'package:grocerryapptwo/view/homeview/account/account.dart';
+import 'package:grocerryapptwo/view/homeview/account/myorder/ordersuccess.dart';
 import 'package:grocerryapptwo/view/homeview/favouitescreen.dart';
 import 'package:grocerryapptwo/view/homeview/homescreenlast.dart';
 
@@ -25,8 +27,9 @@ class _BottomBarState extends State<BottomBar> {
 
   List pages=[
     HomeScreenLast(),
-    SignupScreen(),
-FavouriteScreen()
+    AccountScreen(),
+FavouriteScreen(),
+    OrderSuccess()
   ];
 
 

@@ -4,10 +4,14 @@ import 'package:grocerryapptwo/controller/components/greytextwidget.dart';
 import 'package:grocerryapptwo/controller/utils/constant/appcolors/appcolors.dart';
 import 'package:grocerryapptwo/controller/utils/constant/appicons/appicons.dart';
 import 'package:grocerryapptwo/controller/utils/constant/appimages/appimages.dart';
+import 'package:grocerryapptwo/view/authview/loginscreen/login.dart';
+import 'package:grocerryapptwo/view/homeview/account/aboutme/aboutme.dart';
 import 'package:grocerryapptwo/view/homeview/account/myaddress/myaddress.dart';
 import 'package:grocerryapptwo/view/homeview/account/myorder/myorder.dart';
+import 'package:grocerryapptwo/view/homeview/account/notifications/notifications.dart';
 import 'package:grocerryapptwo/view/homeview/account/trackorder.dart';
 import 'package:grocerryapptwo/view/homeview/account/trackorderfinal.dart';
+import 'package:grocerryapptwo/view/homeview/favouitescreen.dart';
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
 
@@ -73,7 +77,10 @@ class AccountScreen extends StatelessWidget {
                   ),
 SizedBox(height:15),
                   ListTile(
-                    onTap: (){},
+                    onTap: (){
+    Navigator.push(context, MaterialPageRoute(builder:(context)=> AboutMe()));
+    },
+
                     leading: Icon(Icons.person,color: AppColors.greenColor,),
                     title: BlackTextWidget(textAlign: TextAlign.start, text: 'About me'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
@@ -87,42 +94,58 @@ SizedBox(height:15),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
                   ),
                   ListTile(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context)=>FavouriteScreen()
+                      ));
+                    },
                     leading: Icon(Icons.favorite_outline,color: AppColors.greenColor,),
-                    title: BlackTextWidget(text: 'My Favourites'),
+                    title: BlackTextWidget(textAlign: TextAlign.start, text:'My Favourites'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
                   ),
                   ListTile(
                     onTap: (){
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Myaddress()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>MyAddress()));
 
                     },
                     leading: Icon(Icons.location_on_outlined,color: AppColors.greenColor,),
-                    title: BlackTextWidget(text: 'My Address'),
+                    title: BlackTextWidget(textAlign: TextAlign.start, text: 'My Address'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
                   ),
                   ListTile(
-                    onTap: (){},
+                    onTap: (){
+
+                    },
                     leading:ImageIcon(AssetImage(AppIcons.crediticon),color: AppColors.greenColor,),
-                    title: BlackTextWidget(text: 'Credit Cards'),
+                    title: BlackTextWidget(textAlign: TextAlign.start, text: 'Credit Cards'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
                   ),
                   ListTile(
-                    onTap: (){},
+                    onTap: (){
+
+                    },
                     leading: ImageIcon(AssetImage(AppIcons.transactionicon),color: AppColors.greenColor,),
-                    title: BlackTextWidget(text: 'Transactions'),
+                    title: BlackTextWidget(textAlign: TextAlign.start, text: 'Transactions'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
                   ),
                   ListTile(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                          builder:(context)=>Notifications()
+                      ));
+                    },
                     leading: Icon(Icons.notifications_none,color: AppColors.greenColor,),
-                    title: BlackTextWidget(text: 'Notifications'),
+                    title: BlackTextWidget(textAlign: TextAlign.start, text: 'Notifications'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
                   ),
                   ListTile(
-                    onTap: (){},
+                    onTap: (){
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context)=>LoginScreen()
+                      ));
+                    },
                     leading: ImageIcon(AssetImage(AppIcons.signouticon),color: AppColors.greenColor,),
-                    title: BlackTextWidget(text: 'Sign out'),
+                    title: BlackTextWidget(textAlign: TextAlign.start, text: 'Sign out'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
                   ),
                   SizedBox(height:60),

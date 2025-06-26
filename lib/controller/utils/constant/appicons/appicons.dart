@@ -30,4 +30,7 @@ static String box='assets/icons/box.png';
   static String country='assets/icons/country.png';
   static String call='assets/icons/call.png';
   static String track='assets/icons/track.png';
+  static String shopbag='assets/icons/shopbag.png';
+  static String lock='assets/icons/lock.png';
+  static String address='assets/icons/address.png';
 }
