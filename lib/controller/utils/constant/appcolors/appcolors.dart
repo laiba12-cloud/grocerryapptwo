@@ -26,4 +26,6 @@ class AppColors{
   static Color navyColor=Color(0xff000080);
   static Color fuchsiaColor=Color(0xffFF00FF);
   static Color purpleColor=Color(0xff800080);
+  static Color lightgrey=Color(0xffF5F5F5);
+
 }

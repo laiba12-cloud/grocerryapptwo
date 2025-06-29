@@ -66,7 +66,7 @@ List <String> price=[
       return Scaffold(
           appBar: AppBar(
             leading: IconButton(onPressed: () {
-              Navigator.push(context,MaterialPageRoute(builder: (context)=>BottomBar()));
+              Navigator.pop(context);
               }, icon: Icon(Icons.arrow_back)),
             title: Text('Favourite'),
             centerTitle: true,

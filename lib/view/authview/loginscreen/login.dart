@@ -23,24 +23,27 @@ class _SignupScreenState extends State<LoginScreen> {
                       padding: const EdgeInsets.all(15.0),
                       child: Row(
                           children: [
-                            Icon(Icons.arrow_back, color: Colors.white),
-                            SizedBox(width: 50),
-                            Text('Welcome', style: TextStyle(
-                              color: Colors.white,
-                              fontSize:15,
-                            ),),
-                          ]
-                      ),
+                            IconButton(onPressed:(){
+                              Navigator.pop(context);},
+                              icon: Icon(Icons.arrow_back, color: Colors.white)),
+                    SizedBox(width: 50),
+                    Text('Welcome', style: TextStyle(
+                    color: Colors.white,
+                    fontSize:15,
+                    ),),
+                    ]
+                    ),
                     ),
                     Spacer(),
                     Container(
-                        width: double.infinity,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.only(left:15),
-                                child: Text('Sign in to Your account', style: TextStyle(
+                    width: double.infinity,
+                    child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                    Padding(
+                    padding: const EdgeInsets.only(left:15),
+                    child: Text('Sign in to Your account', style
+                    : TextStyle(
                                   color: Colors.black,
                                 )),
                               ),

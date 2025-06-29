@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:grocerryapptwo/controller/components/greentextbutton.dart';
+import 'package:grocerryapptwo/view/bottombar.dart';
 
 import '../../../controller/components/blacktextwidget.dart';
 import '../../../controller/components/greenbutton.dart';
@@ -24,7 +26,9 @@ decoration:BoxDecoration(
     SizedBox(height:20),
     GreyTextWidget(text: 'Lorem ipsum dolor sit amet, consetetur \n sadipscing elitr, sed diam nonumy'),
     Spacer(),
-    GreenButton(text: 'Get Started', onTap: (){}),
+    GreenTextButton(text: 'Get Started', onTap:   (){Navigator.pushReplacement(context, MaterialPageRoute(builder: (context)=>BottomBar()));
+
+  }),
     SizedBox(height:50),
     ]
     )

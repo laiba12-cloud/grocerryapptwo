@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocerryapptwo/controller/components/Row.dart';
 import 'package:grocerryapptwo/controller/components/blacktextwidget.dart';
 import 'package:grocerryapptwo/controller/utils/constant/appicons/appicons.dart';
+import 'package:grocerryapptwo/view/homeview/account/review/write%20reviews.dart';
 
 import '../../../controller/components/greytextwidget.dart';
 import '../../../controller/utils/constant/appcolors/appcolors.dart';
@@ -41,9 +42,15 @@ List <String> gtext=[
       Widget build(BuildContext context) {
         return Scaffold(
           appBar: AppBar(
-            leading:IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back)),
-            title: BlackTextWidget(text: 'Track Orderrrr'),
+            leading:IconButton(onPressed: (){
+              Navigator.pop(context);
+            }, icon: Icon(Icons.arrow_back)),
+            title: BlackTextWidget(text: 'Track Order'),
             centerTitle: true,
+            actions: [
+              IconButton(onPressed: (){Navigator.push(context,MaterialPageRoute(builder: (context)=>WriteREviews()
+              ));}, icon: ImageIcon(AssetImage(AppIcons.listicon)))
+            ],
           ),
           body:Column(
             children: [

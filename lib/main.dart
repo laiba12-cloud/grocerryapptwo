@@ -5,6 +5,7 @@ import 'package:grocerryapptwo/view/authview/signupscreen/signup.dart';
 import 'package:grocerryapptwo/view/authview/welcomescreen/welcome.dart';
 import 'package:grocerryapptwo/view/authview/welcomescreen/welcome.dart';
 import 'package:grocerryapptwo/view/bottombar.dart';
+import 'package:grocerryapptwo/view/homeview/account/aboutme/aboutme.dart';
 import 'package:grocerryapptwo/view/homeview/account/account.dart';
 import 'package:grocerryapptwo/view/homeview/account/trackorder.dart';
 //import 'package:grocerryapptwo/view/homeview/account/track%20order.dart';
@@ -32,9 +33,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      debugShowCheckedModeBanner: false,
-        home://TrackClass()
-        AccountScreen()
-        //BottomBar()
+        home:SplashScreenfour()
+      //TrackClass()
+       // AccountScreen()
+       // AboutMe()
+      //BottomBar()
       //GridClass()
        // HomeScreenLast()
       //HomeScreenFinal()

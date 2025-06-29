@@ -6,11 +6,14 @@ import 'package:grocerryapptwo/controller/utils/constant/appicons/appicons.dart'
 import 'package:grocerryapptwo/controller/utils/constant/appimages/appimages.dart';
 import 'package:grocerryapptwo/view/authview/loginscreen/login.dart';
 import 'package:grocerryapptwo/view/homeview/account/aboutme/aboutme.dart';
+import 'package:grocerryapptwo/view/homeview/account/card/mycard.dart';
+import 'package:grocerryapptwo/view/homeview/account/cardtwo/two.dart';
 import 'package:grocerryapptwo/view/homeview/account/myaddress/myaddress.dart';
 import 'package:grocerryapptwo/view/homeview/account/myorder/myorder.dart';
 import 'package:grocerryapptwo/view/homeview/account/notifications/notifications.dart';
 import 'package:grocerryapptwo/view/homeview/account/trackorder.dart';
 import 'package:grocerryapptwo/view/homeview/account/trackorderfinal.dart';
+import 'package:grocerryapptwo/view/homeview/account/transactions/transactions.dart';
 import 'package:grocerryapptwo/view/homeview/favouitescreen.dart';
 class AccountScreen extends StatelessWidget {
   const AccountScreen({super.key});
@@ -114,8 +117,8 @@ SizedBox(height:15),
                   ),
                   ListTile(
                     onTap: (){
-
-                    },
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>MyCardTwo()));
+    },
                     leading:ImageIcon(AssetImage(AppIcons.crediticon),color: AppColors.greenColor,),
                     title: BlackTextWidget(textAlign: TextAlign.start, text: 'Credit Cards'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
@@ -123,6 +126,7 @@ SizedBox(height:15),
                   ListTile(
                     onTap: (){
 
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=>Transactions()));
                     },
                     leading: ImageIcon(AssetImage(AppIcons.transactionicon),color: AppColors.greenColor,),
                     title: BlackTextWidget(textAlign: TextAlign.start, text: 'Transactions'),
@@ -148,7 +152,7 @@ SizedBox(height:15),
                     title: BlackTextWidget(textAlign: TextAlign.start, text: 'Sign out'),
                     trailing: Icon(Icons.arrow_forward_ios_outlined,color:AppColors.greyColor),
                   ),
-                  SizedBox(height:60),
+                  SizedBox(height:20),
                 ],
               ),
 

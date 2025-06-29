@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:grocerryapptwo/controller/components/blacktextwidget.dart';
 import 'package:grocerryapptwo/controller/utils/constant/appcolors/appcolors.dart';
 import 'package:grocerryapptwo/controller/utils/constant/appicons/appicons.dart';
+import 'package:grocerryapptwo/view/homeview/account/trackorderfinal.dart';
 
 class MyOrder extends StatefulWidget {
   MyOrder({super.key});
@@ -15,6 +16,19 @@ class _MyOrderState extends State<MyOrder> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back),
+      ),
+      title: BlackTextWidget(text: 'My Orders'),
+        centerTitle: true,
+        actions: [
+          IconButton(onPressed: (){
+            Navigator.push(context,MaterialPageRoute(builder: (context)=>TrackorderFinal()));
+            },
+      icon: ImageIcon(AssetImage(AppIcons.listicon))),
+          SizedBox(width:8)
+        ],
+      ),
       body: ListView.builder(
           itemCount: 10,
           itemBuilder: (context, index) {
@@ -136,7 +150,8 @@ class _MyOrderState extends State<MyOrder> {
                       ),
 
                 ]));
-          }),
+          }
+          ),
     );
   }
 }

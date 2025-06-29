@@ -22,7 +22,7 @@ List <String> btext=[
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading:Icon(Icons.arrow_back),
+        leading:IconButton(onPressed: (){Navigator.pop(context);}, icon: Icon(Icons.arrow_back),),
         title: BlackTextWidget(text: 'Notifications'),
         centerTitle: true,
       ),

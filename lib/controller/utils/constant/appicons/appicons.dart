@@ -33,4 +33,8 @@ static String box='assets/icons/box.png';
   static String shopbag='assets/icons/shopbag.png';
   static String lock='assets/icons/lock.png';
   static String address='assets/icons/address.png';
+  static String circleicon='assets/icons/circleicon.png';
+  static String visa='assets/icons/visa.png';
+  static String paypal='assets/icons/paypal.png';
+  static String polygon='assets/icons/polygon.png';
 }

@@ -6,6 +6,7 @@ import 'package:grocerryapptwo/view/authview/loginscreen/login.dart';
 import 'package:grocerryapptwo/view/authview/signupscreen/signup.dart';
 import 'package:grocerryapptwo/view/homeview/account/account.dart';
 import 'package:grocerryapptwo/view/homeview/account/myorder/ordersuccess.dart';
+import 'package:grocerryapptwo/view/homeview/account/shoppingcart.dart';
 import 'package:grocerryapptwo/view/homeview/favouitescreen.dart';
 import 'package:grocerryapptwo/view/homeview/homescreenlast.dart';
 
@@ -29,7 +30,7 @@ class _BottomBarState extends State<BottomBar> {
     HomeScreenLast(),
     AccountScreen(),
 FavouriteScreen(),
-    OrderSuccess()
+    ShoppingCart()
   ];
 
 

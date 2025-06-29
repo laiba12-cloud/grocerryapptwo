@@ -16,6 +16,7 @@ class _PasswordClassState extends State<PasswordClass> {
   Widget build(BuildContext context) {
     return Container(
       width:double.infinity,
+      color: Colors.white,
       child: TextFormField(
           obscureText: isSecure,
             style: TextStyle(
